@@ -55,6 +55,32 @@ Root.plist:
 </dict>
 ```
 
+<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
+(The screenshot does not pick it up, but there are dots where the normal characters of the text field should be).
+
+## PSSecureEditTextCell
+
+This is a cell where text can be inputted, secured in a password-style manner, and then later used in your tweak somewhere.
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSecureEditTextCell</string>
+	<key>defaults</key>
+	<string>com.nightwind.prefbundleexampleprefs</string>
+	<key>label</key>
+	<string>Text:</string>
+	<key>key</key>
+	<string>testedittextcellkey</string>
+	<key>default</key>
+	<string>default text</string>
+	<key>id</key>
+	<string>testedittextcellid</string>
+</dict>
+```
+
 <div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextCell.jpeg?raw=true" width="415">
 
 ## PSEditTextViewCell
