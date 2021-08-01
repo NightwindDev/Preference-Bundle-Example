@@ -299,7 +299,21 @@ Root.plist:
 
 ## PSSpinnerCell
 
-test test test
+This cell is a cell which has a spinner inside of it. This cell is meant to be inserted before an actual cell is loaded and then deleted.
+
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSpinnerCell</string>
+	<key>label</key>
+	<string>Test</string>
+</dict>
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSpinnerCell.jpeg?raw=true" width="415">
 
 ## PSStaticTextCell
 
