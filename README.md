@@ -82,8 +82,6 @@ Root.plist:
 
 This cell is like PSEditTextCell, in the way that it is also an area for text input. Unlike PSEditTextCell, this cell expands the text input area to fit the whole cell.
 
-This is a cell where text can be inputted, secured in a password-style manner, and then later used in your tweak somewhere.
-
 Root.plist:
 
 ```xml
