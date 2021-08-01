@@ -134,6 +134,7 @@ XXXRootListController.m:
 This cell is similar to PSGiantCell in the terms of size, however it has an option to put an icon into it.
 Your icon should be placed in your `Resources` folder and should be named accordingly to your plist. This cell also allows for an action, just like the PSGiantCell mentioned above.
 
+
 Root.plist:
 
 ```xml
@@ -168,6 +169,7 @@ In this case, the icon is named `testicon.png`, so the image in your `Resources`
 
 PSGroupCell is a really useful cell that allows for seperation of large clusters of cells. 
 
+
 Root.plist:
 
 ```xml
@@ -187,6 +189,7 @@ Root.plist:
 ## PSLinkCell
 
 This cell is used to link to a different view controller. For example in this code snippet, the cell leads to `PSUIPrefsListController` which is the main Settings app page.
+
 
 Root.plist:
 
@@ -210,6 +213,9 @@ Root.plist:
 ## PSLinkListCell
 
 This cell is used to link to a predefined view controller, which has the cells inside of it defined here.
+
+
+Root.plist:
 
 ```xml
 <dict>
