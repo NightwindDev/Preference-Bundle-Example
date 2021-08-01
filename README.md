@@ -322,7 +322,7 @@ This is a cell which just has text.
 
 Root.plist:
 
-```
+```xml
 <dict>
 	<key>cell</key>
 	<string>PSStaticTextCell</string>
