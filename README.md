@@ -3,7 +3,7 @@
 
 ## PSButtonCell
 
-This is a cell that - when pressed, does a certain action. This action can be specified in your XXXRootListController.m file.
+This is a cell that - when pressed, does a certain action. This action can be specified in your `XXXRootListController.m` file.
 
 ## PSEditTextCell
 
