@@ -55,8 +55,7 @@ Root.plist:
 </dict>
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
-(The screenshot does not pick it up, but there are dots where the normal characters of the text field should be).
+<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextCell.jpeg?raw=true" width="415">
 
 ## PSSecureEditTextCell
 
@@ -81,7 +80,9 @@ Root.plist:
 </dict>
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextCell.jpeg?raw=true" width="415">
+<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
+
+(The screenshot does not pick it up, but there are dots where the normal characters of the text field should be).
 
 ## PSEditTextViewCell
 
