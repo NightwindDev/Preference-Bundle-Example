@@ -317,7 +317,21 @@ Root.plist:
 
 ## PSStaticTextCell
 
-test test test
+This is a cell which just has text.
+
+
+Root.plist:
+
+```
+<dict>
+	<key>cell</key>
+	<string>PSStaticTextCell</string>
+	<key>label</key>
+	<string>Test</string>
+</dict>
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSStaticTextCell.jpeg?raw=true" width="415">
 
 ## PSSwitchCell
 
