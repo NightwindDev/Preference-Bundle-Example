@@ -111,13 +111,11 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextViewCell.jpeg?raw=true" width="415">
 
-<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextViewCell.jpeg?raw=true" width="415">
-
 ## PSGiantCell
 
 test test test
 
-<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantCell.jpeg?raw=true" width="415>
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantCell.jpeg?raw=true" width="415">
 
 ## PSGiantIconCell
 
