@@ -5,9 +5,9 @@
 
 This is a cell that - when pressed, does a certain action. This action can be specified in your `XXXRootListController.m` file.
 
-###Example:
+Example:
 
-`root.plist`
+root.plist:
 
 ```xml
 <dict>
@@ -20,7 +20,7 @@ This is a cell that - when pressed, does a certain action. This action can be sp
 </dict>
 ```
 
-`XXXRootListController.m`
+XXXRootListController.m"
 
 ```objective-c
 -(void)killPhoneApp {
