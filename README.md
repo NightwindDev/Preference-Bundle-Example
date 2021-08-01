@@ -240,10 +240,6 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSLinkListCell.gif?raw=true" width="415">
 
-## PSListItemCell
-
-test test test
-
 ## PSSegmentCell
 
 This is a segmented cell, which can have multiple values inputted into it.
@@ -335,8 +331,17 @@ Root.plist:
 
 ## PSSwitchCell
 
-test test test
+This is a cell which has a switch in it, and the value of the switch can be used in the tweak.
 
-## PSTitleValueCell
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSwitchCell</string>
+	<key>default</key>
+	<true/>
+	<key>label</key>
+	<string>Test</string>
+</dict>
+```
 
-test test test
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSwitchCell.jpeg?raw=true" width="415">
