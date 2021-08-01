@@ -9,20 +9,20 @@ Example:
 
 `root.plist`
 
-```
+```xml
 <dict>
-			<key>action</key>
-			<string>killPhoneApp</string>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>label</key>
-			<string>Kill Phone App</string>
+	<key>action</key>
+	<string>killPhoneApp</string>
+	<key>cell</key>
+	<string>PSButtonCell</string>
+	<key>label</key>
+	<string>Kill Phone App</string>
 </dict>
 ```
 
 `XXXRootListController.m`
 
-```
+```objective-c
 -(void)killPhoneApp {
 	pid_t pid;
 	const char* args[] = {"killall", "MobilePhone", NULL};
