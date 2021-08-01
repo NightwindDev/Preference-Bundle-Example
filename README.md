@@ -55,6 +55,8 @@ Root.plist:
 </dict>
 ```
 
+<div><img src="https://i.imgur.com/pDNGlKy.jpg" width="415">
+
 ## PSEditTextViewCell
 
 test test test
