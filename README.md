@@ -30,7 +30,7 @@ XXXRootListController.m:
 }
 ```
 
-![PSButtonCell]https://i.imgur.com/pDNGlKy.jpg
+[PSButtonCell]https://i.imgur.com/pDNGlKy.jpg
 ## PSEditTextCell
 
 test test test
