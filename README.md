@@ -113,13 +113,25 @@ Root.plist:
 
 ## PSGiantCell
 
+This is a cell that is larger than normal cells. This cell can take an action assigned to it, just like PSButtonCell.
+
 ```xml
 <dict>
 	<key>cell</key>
 	<string>PSGiantCell</string>
 	<key>label</key>
 	<string>Test</string>
+	<key>action</key>
+	<string>respring</string>
 </dict>
+```
+
+```objective-c
+-(void)respring {
+	pid_t pid;
+	const char* args[] = {"killall", "SpringBoard", NULL};
+	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+}
 ```
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantCell.jpeg?raw=true" width="415">
