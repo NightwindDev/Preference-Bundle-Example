@@ -76,7 +76,7 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
 
-(The screenshot does not pick it up, but there are dots where the normal characters of the text field should be).
+(The screenshot does not pick it up, but there are dots where the normal text characters of the text field should be).
 
 ## PSEditTextViewCell
 
