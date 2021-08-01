@@ -48,8 +48,6 @@ Root.plist:
 	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
-	<key>id</key>
-	<string>testedittextcellid</string>
 </dict>
 ```
 
@@ -73,8 +71,6 @@ Root.plist:
 	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
-	<key>id</key>
-	<string>testedittextcellid</string>
 </dict>
 ```
 
@@ -100,8 +96,6 @@ Root.plist:
 	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
-	<key>id</key>
-	<string>testedittextcellid</string>
 </dict>
 ```
 
