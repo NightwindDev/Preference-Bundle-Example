@@ -86,7 +86,28 @@ Root.plist:
 
 ## PSEditTextViewCell
 
-test test test
+This cell is like PSEditTextCell, in the way that it is also an area for text input. Unlike PSEditTextCell, this cell expands the text input area to fit the whole cell.
+
+This is a cell where text can be inputted, secured in a password-style manner, and then later used in your tweak somewhere.
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSEditTextViewCell</string>
+	<key>defaults</key>
+	<string>com.nightwind.prefbundleexampleprefs</string>
+	<key>key</key>
+	<string>testedittextcellkey</string>
+	<key>default</key>
+	<string>default text</string>
+	<key>id</key>
+	<string>testedittextcellid</string>
+</dict>
+```
+
+<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextViewCell.jpeg?raw=true" width="415">
 
 ## PSGiantCell
 
