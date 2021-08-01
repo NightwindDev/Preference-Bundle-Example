@@ -141,7 +141,26 @@ XXXRootListController.m:
 
 ## PSGiantIconCell
 
-test test test
+This cell is similar to PSGiantCell in the terms of size, however it has an option to put an icon into it.
+Your icon should be placed in your `/Resources` folder and should be named accordingly to your plist.
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSGiantIconCell</string>
+	<key>label</key>
+	<string>Test</string>
+	<key>icon</key>
+	<string>testicon.png</string>
+</dict>
+```
+
+In this case, the icon is named `testicon.png`, so the image in your `/Resources` folder should be named `testicon.png` as well. If you want to look at the icon in Filza on device, you can find it in `/Library/PreferenceBundles/YourBundleName.bundle/`.
+
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantIconCell.jpeg?raw=true" width="415">
 
 ## PSGroupCell
 
