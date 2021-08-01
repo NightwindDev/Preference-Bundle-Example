@@ -113,7 +113,14 @@ Root.plist:
 
 ## PSGiantCell
 
-test test test
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSGiantCell</string>
+	<key>label</key>
+	<string>Test</string>
+</dict>
+```
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantCell.jpeg?raw=true" width="415">
 
