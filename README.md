@@ -7,7 +7,7 @@ This is a cell that - when pressed, does a certain action. This action can be sp
 
 Example:
 
-root.plist:
+Root.plist:
 
 ```xml
 <dict>
@@ -20,7 +20,7 @@ root.plist:
 </dict>
 ```
 
-XXXRootListController.m"
+XXXRootListController.m:
 
 ```objective-c
 -(void)killPhoneApp {
