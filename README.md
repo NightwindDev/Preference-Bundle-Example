@@ -244,13 +244,37 @@ Root.plist:
 
 test test test
 
-## PSSecureEditTextCell
-
-test test test
-
 ## PSSegmentCell
 
-test test test
+This is a segmented cell, which can have multiple values inputted into it.
+
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSegmentCell</string>
+	<key>default</key>
+	<integer>0</integer>
+	<key>label</key>
+	<string>Test</string>
+	<key>validTitles</key>
+	<array>
+		<string>test 1</string>
+		<string>test 2</string>
+		<string>test 3</string>
+	</array>
+	<key>validValues</key>
+	<array>
+		<integer>0</integer>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+</dict>
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSegmentCell.jpeg?raw=true" width="415">
 
 ## PSSliderCell
 
