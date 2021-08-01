@@ -5,6 +5,31 @@
 
 This is a cell that - when pressed, does a certain action. This action can be specified in your `XXXRootListController.m` file.
 
+Example:
+
+`root.plist`
+
+```
+<dict>
+			<key>action</key>
+			<string>killPhoneApp</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Kill Phone App</string>
+</dict>
+```
+
+`XXXRootListController.m`
+
+```
+-(void)killPhoneApp {
+	pid_t pid;
+	const char* args[] = {"killall", "MobilePhone", NULL};
+	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+}
+```
+
 ## PSEditTextCell
 
 test test test
