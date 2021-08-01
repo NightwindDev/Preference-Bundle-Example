@@ -188,7 +188,26 @@ Root.plist:
 
 ## PSLinkCell
 
-test test test
+This cell is used to link to a different view controller. For example in this code snippet, the cell leads to `PSUIPrefsListController` which is the main Settings app page.
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSLinkCell</string>
+	<key>detail</key>
+	<string>PSUIPrefsListController</string>
+	<key>icon</key>
+	<string>icon.png</string>
+	<key>isController</key>
+	<true/>
+	<key>label</key>
+	<string>test label</string>
+</dict>
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSLinkCell.jpeg?raw=true" width="415">
 
 ## PSLinkListCell
 
