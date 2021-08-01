@@ -349,6 +349,20 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSwitchCell.jpeg?raw=true" width="415">
 
+## Universal Keys
+
+**height** - determines the height of the cell 
+```xml
+<key>height</key>
+<string>66</string>
+```
+
+**id** - gives a unique identifier to the cell.
+```xml
+<key>id</key>
+<string>testCellId</string>
+```
+
 <br/>
 
 # How To Link Cells to Tweak
