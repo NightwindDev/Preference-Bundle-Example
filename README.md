@@ -278,7 +278,22 @@ Root.plist:
 
 ## PSSliderCell
 
-test test test
+This is a cell which contains a slider. The slider can be dragged and have multiple output values based on where the knob is located.
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSliderCell</string>
+	<key>default</key>
+	<real>66</real>
+	<key>min</key>
+	<integer>0</integer>
+	<key>max</key>
+	<integer>50</integer>
+</dict>
+```
 
 ## PSSpinnerCell
 
