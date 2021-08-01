@@ -348,3 +348,6 @@ Root.plist:
 ```
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSwitchCell.jpeg?raw=true" width="415">
+
+
+# How To Link Cells to Tweak
