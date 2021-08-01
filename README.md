@@ -30,8 +30,7 @@ XXXRootListController.m:
 }
 ```
 
-![https://i.imgur.com/pDNGlKy.jpg]
-
+<div><img src="https://i.imgur.com/pDNGlKy.jpg" width="415"></div>
 ## PSEditTextCell
 
 test test test
