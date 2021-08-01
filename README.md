@@ -333,6 +333,9 @@ Root.plist:
 
 This is a cell which has a switch in it, and the value of the switch can be used in the tweak.
 
+
+Root.plist:
+
 ```xml
 <dict>
 	<key>cell</key>
