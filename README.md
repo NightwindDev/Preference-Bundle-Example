@@ -1,6 +1,8 @@
 # Preference Bundle Example
 
 
+
+
 ## PSButtonCell
 
 This is a cell that - when pressed, does a certain action. This action can be specified in your `XXXRootListController.m` file.
@@ -31,6 +33,10 @@ XXXRootListController.m:
 ```
 
 <div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSButtonCell.jpeg?raw=true" width="415">
+
+
+
+
 
 ## PSEditTextCell
 
