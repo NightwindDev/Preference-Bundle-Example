@@ -115,6 +115,9 @@ Root.plist:
 
 This is a cell that is larger than normal cells. This cell can take an action assigned to it, just like PSButtonCell.
 
+
+Root.plist:
+
 ```xml
 <dict>
 	<key>cell</key>
@@ -125,6 +128,8 @@ This is a cell that is larger than normal cells. This cell can take an action as
 	<string>respring</string>
 </dict>
 ```
+
+XXXRootListController.m:
 
 ```objective-c
 -(void)respring {
