@@ -209,7 +209,30 @@ Root.plist:
 
 ## PSLinkListCell
 
-test test test
+This cell is used to link to a predefined view controller, which has the cells inside of it defined here.
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSLinkListCell</string>
+	<key>detail</key>
+	<string>PSListItemsController</string>
+	<key>label</key>
+	<string>Test 1</string>
+	<key>validTitles</key>
+	<array>
+		<string>List Test 1</string>
+		<string>List Test 2</string>
+	</array>
+	<key>validValues</key>
+	<array>
+		<integer>0</integer>
+		<integer>1</integer>
+	</array>
+</dict>
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSLinkListCell.gif?raw=true" width="415">
 
 ## PSListItemCell
 
