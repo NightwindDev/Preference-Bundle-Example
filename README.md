@@ -31,11 +31,7 @@ XXXRootListController.m:
 }
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSButtonCell.jpeg?raw=true" width="415">
-
-
-<br/>
-<br/>
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSButtonCell.jpeg?raw=true" width="415">
 
 
 ## PSEditTextCell
@@ -61,7 +57,7 @@ Root.plist:
 </dict>
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextCell.jpeg?raw=true" width="415">
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextCell.jpeg?raw=true" width="415">
 
 ## PSSecureEditTextCell
 
@@ -86,7 +82,7 @@ Root.plist:
 </dict>
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSecureEditTextCell.jpeg?raw=true" width="415">
 
 (The screenshot does not pick it up, but there are dots where the normal characters of the text field should be).
 
@@ -113,11 +109,13 @@ Root.plist:
 </dict>
 ```
 
-<div><img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextViewCell.jpeg?raw=true" width="415">
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSEditTextViewCell.jpeg?raw=true" width="415">
 
 ## PSGiantCell
 
 test test test
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantCell.jpeg?raw=true" width="415>
 
 ## PSGiantIconCell
 
