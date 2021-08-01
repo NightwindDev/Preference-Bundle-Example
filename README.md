@@ -190,7 +190,7 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGroupCell.jpeg?raw=true" width="415">
 
-(Pictured here: 2 PSGroupCells [at the top] and the above PSGiantIconCells with the icons).
+(Pictured here: 2 PSGiantIconCells, which are the ones with the icons, and PSGroupCells above them).
 
 ## PSLinkCell
 
