@@ -166,17 +166,7 @@ XXXRootListController.m:
 	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
 }
 ```
-```
 
-XXXRootListController.m:
-
-```objective-c
--(void)respring {
-	pid_t pid;
-	const char* args[] = {"killall", "SpringBoard", NULL};
-	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
-}
-```
 In this case, the icon is named `testicon.png`, so the image in your `/Resources` folder should be named `testicon.png` as well. If you want to look at the icon in Filza on device, you can find it in `/Library/PreferenceBundles/YourBundleName.bundle/`.
 
 
