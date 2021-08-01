@@ -140,7 +140,7 @@ XXXRootListController.m:
 ## PSGiantIconCell
 
 This cell is similar to PSGiantCell in the terms of size, however it has an option to put an icon into it.
-Your icon should be placed in your `/Resources` folder and should be named accordingly to your plist.
+Your icon should be placed in your `/Resources` folder and should be named accordingly to your plist. This cell also allows for an action, just like the PSGiantCell mentioned above.
 
 Root.plist:
 
@@ -152,9 +152,31 @@ Root.plist:
 	<string>Test</string>
 	<key>icon</key>
 	<string>testicon.png</string>
+	<key>action</key>
+	<string>killSettingsApp</string>
 </dict>
 ```
 
+XXXRootListController.m:
+
+```objective-c
+-(void)killSettingsApp {
+	pid_t pid;
+	const char* args[] = {"killall", "Preferences", NULL};
+	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+}
+```
+```
+
+XXXRootListController.m:
+
+```objective-c
+-(void)respring {
+	pid_t pid;
+	const char* args[] = {"killall", "SpringBoard", NULL};
+	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+}
+```
 In this case, the icon is named `testicon.png`, so the image in your `/Resources` folder should be named `testicon.png` as well. If you want to look at the icon in Filza on device, you can find it in `/Library/PreferenceBundles/YourBundleName.bundle/`.
 
 
@@ -162,7 +184,23 @@ In this case, the icon is named `testicon.png`, so the image in your `/Resources
 
 ## PSGroupCell
 
-test test test
+PSGroupCell is a really useful cell that allows for seperation of large clusters of cells. 
+
+Root.plist:
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSGroupCell</string>
+	<key>label</key>
+	<string>Test</string>
+</dict>
+
+```
+
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGroupCell.jpeg?raw=true" width="415">
+
+(Pictured here: 2 PSGroupCells [at the top] and the above PSGiantIconCells with the icons).
 
 ## PSLinkCell
 
