@@ -378,9 +378,10 @@ Root.plist:
 The code below shoould be put above `%hook`s and, if present, `%group`s as well. 
 
 ```objective-c
-static BOOL testSwitchKey;
-static NSInteger testSegmentkey;
-static NSInteger testSliderKey;
+static BOOL testSwitchKey; // PSSwitchCell
+static NSInteger testSegmentkey; // PSSegmentCell
+static NSInteger testSliderKey; // PSSliderCell
+static NSString testEditTextKey; // PSEditTextCell or PSSecureEditTextCell
 ```
 
 The code below should be put in the main tweak.x/tweak.xm file.
@@ -392,6 +393,7 @@ void preferencesChanged(){
 	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchKey"] ? [[prefs valueForKey:@"testSwitchKey"] boolValue] : YES );
 	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentKey"] ? [[prefs valueForKey:@"testSegmentKey"] integerValue] : 0 );
 	testSliderKey = (prefs && [prefs objectForKey:@"testSliderKey"] ? [[prefs valueForKey:@"testSliderKey"] floatValue] : 30 );
+	testEditTextKey = [prefs objectForKey:@"testEditTextKey"];
 }
 
 %ctor{
