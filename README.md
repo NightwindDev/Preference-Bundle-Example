@@ -1,5 +1,27 @@
 # Preference Bundle Example
 
+## Universal Keys
+
+**height** - determines the height of the cell 
+```xml
+<key>height</key>
+<string>66</string>
+```
+
+**id** - gives a unique identifier to the cell
+```xml
+<key>id</key>
+<string>testCellId</string>
+```
+
+**PostNotification** - adds a way for the tweak to communicate with the preference bundle
+```xml
+<key>PostNotification</key>
+<string>com.nightwind.prefbundleexampleprefs-updated</string>
+```
+
+<br/>
+
 ## PSButtonCell
 
 This is a cell that - when pressed, does a certain action. This action can be specified in your `XXXRootListController.m` file.
@@ -348,26 +370,6 @@ Root.plist:
 ```
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSSwitchCell.jpeg?raw=true" width="415">
-
-## Universal Keys
-
-**height** - determines the height of the cell 
-```xml
-<key>height</key>
-<string>66</string>
-```
-
-**id** - gives a unique identifier to the cell
-```xml
-<key>id</key>
-<string>testCellId</string>
-```
-
-**PostNotification** - adds a way for the tweak to communicate with the preference bundle
-```xml
-<key>PostNotification</key>
-<string>com.nightwind.prefbundleexampleprefs-updated</string>
-```
 
 <br/>
 
