@@ -375,15 +375,23 @@ Root.plist:
 
 # Linking Cells to Tweak
 
+The code below shoould be put above `%hook`s and, if present, `%group`s as well. 
+
+```objective-c
+static BOOL testSwitchKey;
+static NSInteger testSegmentkey;
+static NSInteger testSliderKey;
+```
+
 The code below should be put in the main tweak.x/tweak.xm file.
 
 ```objective-c
 void preferencesChanged(){
 	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
 
-	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchID"] ? [[prefs valueForKey:@"testSwitchID"] boolValue] : YES );
-	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentID"] ? [[prefs valueForKey:@"testSegmentID"] integerValue] : 0 );
-	testSliderKey = (prefs && [prefs objectForKey:@"testSliderID"] ? [[prefs valueForKey:@"testSliderID"] floatValue] : 30 );
+	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchKey"] ? [[prefs valueForKey:@"testSwitchKey"] boolValue] : YES );
+	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentKey"] ? [[prefs valueForKey:@"testSegmentKey"] integerValue] : 0 );
+	testSliderKey = (prefs && [prefs objectForKey:@"testSliderKey"] ? [[prefs valueForKey:@"testSliderKey"] floatValue] : 30 );
 }
 
 %ctor{
