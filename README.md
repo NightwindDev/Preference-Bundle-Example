@@ -384,7 +384,7 @@ static NSInteger testSliderKey; // PSSliderCell
 static NSString testEditTextKey; // PSEditTextCell or PSSecureEditTextCell
 ```
 
-The code below should be put in the main tweak.x/tweak.xm file.
+The code below should be put in the main Tweak.x/Tweak.xm file.
 
 ```objective-c
 void preferencesChanged(){
@@ -405,7 +405,7 @@ void preferencesChanged(){
 
 The key in the tweak.x/tweak.xm file should of course correspond to the key in the .plist file.
 
-So for example,
+So for example say there's a enable tweak switch in the preference bundle, which looks like this:
 
 ```xml
 <dict>
@@ -420,3 +420,30 @@ So for example,
 </dict>
 ```
 
+In the tweak.x/tweak.xm file, there should be this at the top:
+
+```objective-c
+static BOOL tweakEnabled;
+```
+
+...and this at the bottom:
+
+```objective-c
+tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
+```
+
+**Note:** If the default in the switch in the preference bundle is true, then the default should be `YES` in the Tweak.x/Tweak.xm file as well. If the default is set to false, then the default in the Tweak.x/Tweak.xm file should be `NO`.
+
+Root.plist:
+
+```xml
+<key>default</key>
+<true/>
+```
+
+Tweak.x:
+
+```objective-c
+tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
+```
+*It says YES at the very end, so it corresponds to the .plist file.*
