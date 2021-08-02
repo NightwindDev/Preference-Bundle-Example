@@ -447,3 +447,7 @@ Tweak.x:
 tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
 ```
 *It says YES at the very end, so it corresponds to the .plist file.*
+
+# Further Information
+
+https://iphonedev.wiki/index.php/Preferences_specifier_plist
