@@ -20,7 +20,7 @@
 <string>testCellId</string>
 ```
 
-**key** - unique identifier to the cell, which can later be used when
+**key** - unique identifier to the cell, which can later be used when https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/README.md#linking-cells-to-tweak
 ```xml
 <key>key</key>
 <string>testCellKey</string>
