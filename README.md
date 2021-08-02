@@ -357,12 +357,36 @@ Root.plist:
 <string>66</string>
 ```
 
-**id** - gives a unique identifier to the cell.
+**id** - gives a unique identifier to the cell
 ```xml
 <key>id</key>
 <string>testCellId</string>
 ```
 
+**PostNotification** - adds a way for the tweak to communicate with the preference bundle
+```xml
+<key>PostNotification</key>
+<string>com.nightwind.prefbundleexampleprefs-updated</string>
+```
+
 <br/>
 
 # How To Link Cells to Tweak
+
+The code below should be put in the main tweak.x/tweak.xm file.
+
+```objective-c
+void preferencesChanged(){
+	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
+
+	testSwitchID = (prefs && [prefs objectForKey:@"testSwitchID"] ? [[prefs valueForKey:@"testSwitchID"] boolValue] : YES );
+	testSegmentID = (prefs && [prefs objectForKey:@"testSegmentID"] ? [[prefs valueForKey:@"testSegmentID"] integerValue] : 0 );
+	testSliderID = (prefs && [prefs objectForKey:@"testSliderID"] ? [[prefs valueForKey:@"testSliderID"] floatValue] : 30 );
+}
+
+%ctor{
+	preferencesChanged();
+
+	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)preferencesChanged, CFSTR("com.nightwind.prefbundleexampleprefs-updated"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
+}
+```
