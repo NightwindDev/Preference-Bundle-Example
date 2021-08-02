@@ -390,10 +390,10 @@ The code below should be put in the main tweak.x/tweak.xm file.
 void preferencesChanged(){
 	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
 
-	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchKey"] ? [[prefs valueForKey:@"testSwitchKey"] boolValue] : YES );
-	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentKey"] ? [[prefs valueForKey:@"testSegmentKey"] integerValue] : 0 );
-	testSliderKey = (prefs && [prefs objectForKey:@"testSliderKey"] ? [[prefs valueForKey:@"testSliderKey"] floatValue] : 30 );
-	testEditTextKey = [prefs objectForKey:@"testEditTextKey"];
+	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchKey"] ? [[prefs valueForKey:@"testSwitchKey"] boolValue] : YES ); // PSSwitchCell
+	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentKey"] ? [[prefs valueForKey:@"testSegmentKey"] integerValue] : 0 ); // PSSegmentCell
+	testSliderKey = (prefs && [prefs objectForKey:@"testSliderKey"] ? [[prefs valueForKey:@"testSliderKey"] floatValue] : 30 ); // PSSliderCell
+	testEditTextKey = [prefs objectForKey:@"testEditTextKey"]; // PSEditTextCell or PSSecureEditTextCell
 }
 
 %ctor{
@@ -402,3 +402,21 @@ void preferencesChanged(){
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)preferencesChanged, CFSTR("com.nightwind.prefbundleexampleprefs-updated"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
 }
 ```
+
+The key in the tweak.x/tweak.xm file should of course correspond to the key in the .plist file.
+
+So for example,
+
+```xml
+<dict>
+	<key>cell</key>
+	<string>PSSwitchCell</string>
+	<key>default</key>
+	<true/>
+	<key>label</key>
+	<string>Enable tweak</string>
+	<key>key</key>
+	<string>tweakEnabled</string>
+</dict>
+```
+
