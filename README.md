@@ -373,7 +373,7 @@ Root.plist:
 
 <br/>
 
-# How To Link Cells to Tweak
+# Linking Cells to Tweak
 
 The code below should be put in the main tweak.x/tweak.xm file.
 
