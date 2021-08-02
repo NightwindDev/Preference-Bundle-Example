@@ -2,6 +2,12 @@
 
 ## Universal Keys
 
+**PostNotification** - adds a way for the tweak to communicate with the preference bundle
+```xml
+<key>PostNotification</key>
+<string>com.nightwind.prefbundleexampleprefs-updated</string>
+```
+
 **height** - determines the height of the cell 
 ```xml
 <key>height</key>
@@ -14,10 +20,10 @@
 <string>testCellId</string>
 ```
 
-**PostNotification** - adds a way for the tweak to communicate with the preference bundle
+**key** - unique identifier to the cell, which can later be used when
 ```xml
-<key>PostNotification</key>
-<string>com.nightwind.prefbundleexampleprefs-updated</string>
+<key>key</key>
+<string>testCellKey</string>
 ```
 
 <br/>
@@ -66,8 +72,6 @@ Root.plist:
 	<string>com.nightwind.prefbundleexampleprefs</string>
 	<key>label</key>
 	<string>Text:</string>
-	<key>key</key>
-	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
 </dict>
@@ -89,8 +93,6 @@ Root.plist:
 	<string>com.nightwind.prefbundleexampleprefs</string>
 	<key>label</key>
 	<string>Text:</string>
-	<key>key</key>
-	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
 </dict>
@@ -112,8 +114,6 @@ Root.plist:
 	<string>PSEditTextViewCell</string>
 	<key>defaults</key>
 	<string>com.nightwind.prefbundleexampleprefs</string>
-	<key>key</key>
-	<string>testedittextcellkey</string>
 	<key>default</key>
 	<string>default text</string>
 </dict>
@@ -381,9 +381,9 @@ The code below should be put in the main tweak.x/tweak.xm file.
 void preferencesChanged(){
 	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
 
-	testSwitchID = (prefs && [prefs objectForKey:@"testSwitchID"] ? [[prefs valueForKey:@"testSwitchID"] boolValue] : YES );
-	testSegmentID = (prefs && [prefs objectForKey:@"testSegmentID"] ? [[prefs valueForKey:@"testSegmentID"] integerValue] : 0 );
-	testSliderID = (prefs && [prefs objectForKey:@"testSliderID"] ? [[prefs valueForKey:@"testSliderID"] floatValue] : 30 );
+	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchID"] ? [[prefs valueForKey:@"testSwitchID"] boolValue] : YES );
+	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentID"] ? [[prefs valueForKey:@"testSegmentID"] integerValue] : 0 );
+	testSliderKey = (prefs && [prefs objectForKey:@"testSliderID"] ? [[prefs valueForKey:@"testSliderID"] floatValue] : 30 );
 }
 
 %ctor{
