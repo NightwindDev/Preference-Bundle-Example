@@ -403,7 +403,7 @@ void preferencesChanged(){
 }
 ```
 
-The key in the tweak.x/tweak.xm file should of course correspond to the key in the .plist file.
+The key in the Tweak.x/Tweak.xm file should of course correspond to the key in the .plist file.
 
 So for example say there's a enable tweak switch in the preference bundle, which looks like this:
 
@@ -420,7 +420,7 @@ So for example say there's a enable tweak switch in the preference bundle, which
 </dict>
 ```
 
-In the tweak.x/tweak.xm file, there should be this at the top:
+In the Tweak.x/Tweak.xm file, there should be this at the top:
 
 ```objective-c
 static BOOL tweakEnabled;
