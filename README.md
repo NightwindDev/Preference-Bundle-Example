@@ -55,7 +55,7 @@ XXXRootListController.m:
 }
 ```
 
-<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSButtonCell.jpeg?raw=true" width="415">
+<img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSButtonCell.jpeg" width="415">
 
 
 ## PSEditTextCell
