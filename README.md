@@ -417,6 +417,8 @@ So for example say there's a enable tweak switch in the preference bundle, which
 	<string>Enable tweak</string>
 	<key>key</key>
 	<string>tweakEnabled</string>
+	<key>PostNotification</key>
+	<string>com.nightwind.prefbundleexampleprefs-updated</string>
 </dict>
 ```
 
