@@ -42,6 +42,8 @@ Root.plist:
 	<string>PSButtonCell</string>
 	<key>label</key>
 	<string>Kill Phone App</string>
+	<key>defaults</key>
+	<string>com.nightwind.prefbundleexampleprefs</string>
 </dict>
 ```
 
