@@ -389,16 +389,16 @@ static NSString *testEditTextKey; // PSEditTextCell or PSSecureEditTextCell
 The code below should be put in the main `Tweak.x`/`Tweak.xm` file.
 
 ```logos
-void preferencesChanged(){
-	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
+static void preferencesChanged() {
+	NSUserDefaults *const prefs = [[NSUserDefaults alloc] initWithSuiteName:@"com.nightwind.prefbundleexampleprefs"];
 
-	testSwitchKey = (prefs && [prefs objectForKey:@"testSwitchKey"] ? [[prefs valueForKey:@"testSwitchKey"] boolValue] : YES ); // PSSwitchCell
-	testSegmentKey = (prefs && [prefs objectForKey:@"testSegmentKey"] ? [[prefs valueForKey:@"testSegmentKey"] integerValue] : 0 ); // PSSegmentCell
-	testSliderKey = (prefs && [prefs objectForKey:@"testSliderKey"] ? [[prefs valueForKey:@"testSliderKey"] floatValue] : 30 ); // PSSliderCell
-	testEditTextKey = [prefs objectForKey:@"testEditTextKey"]; // PSEditTextCell or PSSecureEditTextCell
+	testSwitchKey = [prefs objectForKey:@"testSwitchKey"] ? [prefs boolForKey:@"testSwitchKey"] : YES; // PSSwitchCell
+	testSegmentKey = [prefs objectForKey:@"testSegmentKey"] ? [prefs integerForKey:@"testSegmentKey"] : 0; // PSSegmentCell
+	testSliderKey = [prefs objectForKey:@"testSliderKey"] ? [prefs floatForKey:@"testSliderKey"] : 30.0f; // PSSliderCell
+	testEditTextKey = [prefs objectForKey:@"testEditTextKey"] ? [prefs stringForKey:@"testEditTextKey"] : @""; // PSEditTextCell or PSSecureEditTextCell
 }
 
-%ctor{
+%ctor {
 	preferencesChanged();
 
 	CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, (CFNotificationCallback)preferencesChanged, CFSTR("com.nightwind.prefbundleexampleprefs-updated"), NULL, CFNotificationSuspensionBehaviorDeliverImmediately);
@@ -433,22 +433,22 @@ static BOOL tweakEnabled;
 ...and this at the bottom:
 
 ```logos
-tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
+tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [prefs boolForKey:@"tweakEnabled"] : YES;
 ```
 
 **Note:** If the default in the switch in the preference bundle is true, then the default should be `YES` in the `Tweak.x`/`Tweak.xm` file as well. If the default is set to false, then the default in the `Tweak.x`/`Tweak.xm` file should be `NO`.
 
-Root.plist:
+`Root.plist`:
 
 ```xml
 <key>default</key>
 <true/>
 ```
 
-Tweak.x:
+`Tweak.x`:
 
 ```logos
-tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
+tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES;
 ```
 *It says `YES` at the very end so that corresponds to the .plist file.*
 
