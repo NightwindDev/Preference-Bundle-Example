@@ -50,10 +50,10 @@ Root.plist:
 XXXRootListController.m:
 
 ```logos
--(void)killPhoneApp {
+- (void)killPhoneApp {
 	pid_t pid;
 	const char* args[] = {"killall", "MobilePhone", NULL};
-	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+	posix_spawn(&pid, ROOT_PATH("/usr/bin/killall"), NULL, NULL, (char* const*)args, NULL);
 }
 ```
 
@@ -106,9 +106,9 @@ Root.plist:
 
 ## PSEditTextViewCell
 
-This cell is like PSEditTextCell, in the way that it is also an area for text input. Unlike PSEditTextCell, this cell expands the text input area to fit the whole cell.
+This cell is like `PSEditTextCell`, in the way that it is also an area for text input. Unlike `PSEditTextCell`, this cell expands the text input area to fit the whole cell.
 
-Root.plist:
+`Root.plist`:
 
 ```xml
 <dict>
@@ -125,10 +125,10 @@ Root.plist:
 
 ## PSGiantCell
 
-This is a cell that is larger than normal cells. This cell can take an action assigned to it, just like PSButtonCell.
+This is a cell that is larger than normal cells. This cell can take an action assigned to it, just like `PSButtonCell`.
 
 
-Root.plist:
+`Root.plist`:
 
 ```xml
 <dict>
@@ -141,13 +141,13 @@ Root.plist:
 </dict>
 ```
 
-XXXRootListController.m:
+`XXXRootListController.m`:
 
 ```logos
--(void)respring {
+- (void)respring {
 	pid_t pid;
 	const char* args[] = {"killall", "SpringBoard", NULL};
-	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+	posix_spawn(&pid, ROOT_PATH("/usr/bin/killall"), NULL, NULL, (char* const*)args, NULL);
 }
 ```
 
@@ -155,8 +155,8 @@ XXXRootListController.m:
 
 ## PSGiantIconCell
 
-This cell is similar to PSGiantCell in the terms of size, however it has an option to put an icon into it.
-Your icon should be placed in your `Resources` folder and should be named accordingly to your plist. This cell also allows for an action, just like the PSGiantCell mentioned above.
+This cell is similar to `PSGiantCell` in the terms of size, however it has an option to put an icon into it.
+Your icon should be placed in your `Resources` folder and should be named accordingly to your plist. This cell also allows for an action, just like the `PSGiantCell` mentioned above.
 
 
 Root.plist:
@@ -177,21 +177,21 @@ Root.plist:
 XXXRootListController.m:
 
 ```logos
--(void)killSettingsApp {
+- (void)killSettingsApp {
 	pid_t pid;
 	const char* args[] = {"killall", "Preferences", NULL};
-	posix_spawn(&pid, "/usr/bin/killall", NULL, NULL, (char* const*)args, NULL);
+	posix_spawn(&pid, ROOT_PATH("/usr/bin/killall"), NULL, NULL, (char* const*)args, NULL);
 }
 ```
 
-In this case, the icon is named `testicon.png`, so the image in your `Resources` folder should be named `testicon.png` as well. If you want to look at the icon in Filza on device, you can find it in `/Library/PreferenceBundles/YourBundleName.bundle/`.
+In this case, the icon is named `testicon.png`, so the image in your `Resources` folder should be named `testicon.png` as well. If you want to look at the icon in Filza on device, you can find it in `/var/jb/Library/PreferenceBundles/YourBundleName.bundle/` on rootless and `/Library/PreferenceBundles/YourBundleName.bundle` on non-rootless ("rootful").
 
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGiantIconCell.jpeg?raw=true" width="415">
 
 ## PSGroupCell
 
-PSGroupCell is a really useful cell that allows for seperation of large clusters of cells. 
+`PSGroupCell` is a really useful cell that allows for seperation of large clusters of cells. 
 
 
 Root.plist:
@@ -208,7 +208,7 @@ Root.plist:
 
 <img src="https://github.com/NightwindDev/Preference-Bundle-Example/blob/main/PSGroupCell.jpeg?raw=true" width="415">
 
-(Pictured here: 2 PSGiantIconCells, which are the ones with the icons, and PSGroupCells above them).
+(Pictured here: two `PSGiantIconCell`s, which are the ones with the icons, and `PSGroupCell`s above them).
 
 ## PSLinkCell
 
@@ -405,7 +405,7 @@ static void preferencesChanged() {
 }
 ```
 
-The key in the `Tweak.x`/`Tweak.xm` file should of course correspond to the key in the .plist file.
+The key in the `Tweak.x`/`Tweak.xm` file should of course correspond to the key in the `.plist` file.
 
 So for example say there's a enable tweak switch in the preference bundle, which looks like this:
 
@@ -450,7 +450,7 @@ tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [prefs boolForKey:@"tweakE
 ```logos
 tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES;
 ```
-*It says `YES` at the very end so that corresponds to the .plist file.*
+*It says `YES` at the very end so that corresponds to the `.plist` file.*
 
 # Further Information
 https://theapplewiki.com/wiki/Dev:Preferences_specifier_plist
