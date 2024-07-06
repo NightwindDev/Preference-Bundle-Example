@@ -49,7 +49,7 @@ Root.plist:
 
 XXXRootListController.m:
 
-```objective-c
+```logos
 -(void)killPhoneApp {
 	pid_t pid;
 	const char* args[] = {"killall", "MobilePhone", NULL};
@@ -143,7 +143,7 @@ Root.plist:
 
 XXXRootListController.m:
 
-```objective-c
+```logos
 -(void)respring {
 	pid_t pid;
 	const char* args[] = {"killall", "SpringBoard", NULL};
@@ -176,7 +176,7 @@ Root.plist:
 
 XXXRootListController.m:
 
-```objective-c
+```logos
 -(void)killSettingsApp {
 	pid_t pid;
 	const char* args[] = {"killall", "Preferences", NULL};
@@ -379,7 +379,7 @@ Root.plist:
 
 The code below shoould be put above `%hook`s and, if present, `%group`s as well. 
 
-```objective-c
+```logos
 static BOOL testSwitchKey; // PSSwitchCell
 static NSInteger testSegmentkey; // PSSegmentCell
 static NSInteger testSliderKey; // PSSliderCell
@@ -388,7 +388,7 @@ static NSString *testEditTextKey; // PSEditTextCell or PSSecureEditTextCell
 
 The code below should be put in the main Tweak.x/Tweak.xm file.
 
-```objective-c
+```logos
 void preferencesChanged(){
 	NSDictionary *prefs = [[NSUserDefaults standardUserDefaults] persistentDomainForName:@"com.nightwind.prefbundleexampleprefs"];
 
@@ -426,13 +426,13 @@ So for example say there's a enable tweak switch in the preference bundle, which
 
 In the Tweak.x/Tweak.xm file, there should be this at the top:
 
-```objective-c
+```logos
 static BOOL tweakEnabled;
 ```
 
 ...and this at the bottom:
 
-```objective-c
+```logos
 tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
 ```
 
@@ -447,7 +447,7 @@ Root.plist:
 
 Tweak.x:
 
-```objective-c
+```logos
 tweakEnabled = (prefs && [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES );
 ```
 *It says YES at the very end, so it corresponds to the .plist file.*
