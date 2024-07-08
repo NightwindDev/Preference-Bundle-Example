@@ -448,7 +448,7 @@ tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [prefs boolForKey:@"tweakE
 `Tweak.x`:
 
 ```logos
-tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [[prefs valueForKey:@"tweakEnabled"] boolValue] : YES;
+tweakEnabled = [prefs objectForKey:@"tweakEnabled"] ? [prefs boolForKey:@"tweakEnabled"] : YES;
 ```
 *It says `YES` at the very end so that corresponds to the `.plist` file.*
 
